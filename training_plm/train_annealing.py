@@ -46,7 +46,7 @@ denoised_scores_path = args.denoised_scores_path
 print(data, lang)
 syn_scores = [float(i) for i in open(synthetic_scores_path).readlines()]
 denoised_scores = [float(i) for i in open(denoised_scores_path).readlines()]
-score_diff = np.array(denoised_scores) - np.array(syn_scores)
+score_diff = np.array(syn_scores) - np.array(denoised_scores) 
 
 wandb.init()
 pattern = re.compile(r'(?<!^)(?=[A-Z])')
