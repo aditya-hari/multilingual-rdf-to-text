@@ -1,0 +1,2 @@
+The English, Russian, German and Irish synthetic datasets can be found at the following link - https://drive.google.com/drive/folders/1PuT92OPDZKtPCyeeUL1njKQMLqbcBU8i?usp=sharing  
+The Hindi data can be obtained from the XAlign dataset that is publicly available - https://github.com/tushar117/XAlign/
