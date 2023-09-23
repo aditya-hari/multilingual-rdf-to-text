@@ -8,3 +8,22 @@ This repository contains the code used for the experiments ran as part of GSoC 2
 | Contributor | [Aditya Hari](https://github.com/aditya-hari)|
 | Mentors | [Diego Moussallem](https://github.com/DiegoMoussallem), [ Nikit Srivastava ](https://github.com/nikit91)|
 | Blogs | [Multilingual Neural Data-to-Text Generation GSoC'23 by Aditya](https://github.com/aditya-hari/rdf-to-text/wiki/) |
+
+## Directory structure 
+```
+├── data_augmentation 
+|  ├── preprocessing
+|  ├── stage-i
+|  ├── stage-ii 
+├── other_baselines
+|  ├── nabu
+|  ├── translate_test
+├── data 
+|  ├── processed
+|  ├── synthetic
+|  ├── outputs
+└── training_plm
+```
+
+## Requirements 
+The requirements can be found in the ```requirements.txt``` file 
