@@ -23,7 +23,7 @@ with open(global_ids, 'r') as f:
         tokens = line.split()
         url_domain = tokens[0].split('.')[0].split('/')[-1]
         obj_id = tokens[-1]
-        if(url_domain in ['ru', 'cy', 'dbpedia']):
+        if(url_domain in langs +['dbpedia']):
             if(obj_id not in id_mapping):
                 id_mapping[obj_id] = {}
             id_mapping[obj_id][url_domain] = tokens[0]

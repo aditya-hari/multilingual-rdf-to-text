@@ -8,27 +8,22 @@ from sklearn.neighbors import KNeighborsClassifier
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--langs', type=str)
-parser.add_argument('--model_name', type=str)
-parser.add_argument('--semantic_scores', type=str)
-parser.add_argument('--syntactic_scores', type=str)
+parser.add_argument('--contrastive_path', type=str)
 parser.add_argument('--semantic_dict_path', type=str)
 parser.add_argument('--syntactic_dict_path', type=str)
 parser.add_argument('--save_path', type=str)
 
 args = parser.parse_args()
 langs = args.langs.split(',')
-model_name = args.model_name
+contrastive_path = args.contrastive_path
 semantic_scores = args.semantic_scores
 syntactic_scores = args.syntactic_scores
 semantic_dict_path = args.semantic_dict_path
 syntactic_dict_path = args.syntactic_dict_path
 save_path = args.save_path
 
-model_name = 'all-distilroberta-v1_sbert_not_pt_cont'
-positives = [float(i.strip()) for i in open(f'{semantic_scores}/postive_scores', 'r').readlines()]
-negatives = [float(i.strip()) for i in open(f'{semantic_scores}/negative_scores', 'r').readlines()]
-positives_syn = [float(i.strip()) for i in open(f'{syntactic_scores}/postive_scores', 'r').readlines()]
-negatives_syn = [float(i.strip()) for i in open(f'{syntactic_scores}/negative_scores', 'r').readlines()]
+positives = [float(i.strip()) for i in open(f'{contrastive_path}/postive_scores', 'r').readlines()]
+negatives = [float(i.strip()) for i in open(f'{contrastive_path}/negative_scores', 'r').readlines()]
 
 positives_2 = list(zip(positives, positive_syn))
 negatives_2 = list(zip(negatives, negative_syn))
@@ -36,11 +31,9 @@ merged = positives_2 + negatives_2
 positive_labels = [1 for i in positives]
 negative_labels = [0 for i in negatives]
 merged_labels = positive_labels + negative_labels
-#X = np.array(merged).reshape(-1, 1)
 y = np.array(merged_labels)
 X = np.array(merged)
 clf = KNeighborsClassifier(3)
-# clf = SVC(kernel='rbf')
 clf.fit(X, y)
 
 merged_dict = json.load(open(syntactic_dict_path, 'r'))
@@ -113,7 +106,7 @@ for key in keys:
                     sent_prop_pairs.append((filtered_candidates[key][f'{lang}_text'][sent_idx], ' | '.join(prop), filtered_candidates[key][f'{lang}_text'][sent_idx]))
                     sent_prop_src.append((key, sent_idx, lang))
 
-with(open(f'{save_name}/sent_prop_src_new.txt', 'w')) as f:
+with(open(f'{save_name}/sent_prop_src.txt', 'w')) as f:
     for src in sent_prop_src:
         f.write('\t'.join([str(x) for x in src]) + '\n')
 

@@ -14,7 +14,6 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--langs', type=str)
 parser.add_argument('--abstract_path', type=str)
-parser.add_argument('--save_dir', type=str)
 parser.add_argument('--subject_set_labels', type=str)
 parser.add_argument('--ontology_props', type=str)
 parser.add_argument('--instance_transitive_en', type=str)
@@ -23,7 +22,6 @@ parser.add_argument('--save_name', type=str)
 args = parser.parse_args()
 langs = args.langs.split(',')
 abstract_path = args.abstract_path
-save_dir = args.save_dir
 subject_set_labels = args.subject_set_labels
 ontology_props = args.ontology_props
 instance_transitive_en = args.instance_transitive_en
