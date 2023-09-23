@@ -4,7 +4,7 @@ This repository contains the code used for the experiments ran as part of GSoC 2
 
 |   Project Details     | |
 |-------------|-------------|
-| GSoC Project | [Multilingual Neural Data-to-Text Generation  @DBpedia 2023]([https://summerofcode.withgoogle.com/programs/2022/projects/HIqpMFb3](https://summerofcode.withgoogle.com/programs/2023/projects/7onLs2cK))        |
+| GSoC Project | [Multilingual Neural Data-to-Text Generation GSoC'23 @DBpedia]([https://summerofcode.withgoogle.com/programs/2022/projects/HIqpMFb3](https://summerofcode.withgoogle.com/programs/2023/projects/7onLs2cK))        |
 | Contributor | [Aditya Hari](https://github.com/aditya-hari)|
 | Mentors | [Diego Moussallem](https://github.com/DiegoMoussallem), [ Nikit Srivastava ](https://github.com/nikit91)|
 | Blogs | [Multilingual Neural Data-to-Text Generation GSoC'23 by Aditya](https://github.com/aditya-hari/rdf-to-text/wiki/) |
@@ -26,4 +26,7 @@ This repository contains the code used for the experiments ran as part of GSoC 2
 ```
 
 ## Requirements 
-The requirements can be found in the ```requirements.txt``` file 
+The requirements can be found in the ```requirements.txt``` file  
+
+## Final report 
+The final report containing a comprehensive report of the work done and the experiments performed as part of this project, as well as the results and analysis, can be found in the ```final_report.pdf``` document   
