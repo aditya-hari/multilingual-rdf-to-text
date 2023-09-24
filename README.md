@@ -26,7 +26,11 @@ This repository contains the code used for the experiments ran as part of GSoC 2
 ```
 
 ## Requirements 
-The requirements can be found in the ```requirements.txt``` file  
+The requirements can be found in the ```requirements.txt``` file   
+
+## Weekly Blogs  
+
+The weekly blogs documenting the work done every week during the course of GSoC 2023 can be found at - https://github.com/aditya-hari/rdf-to-text/wiki
 
 ## Final report 
 The final report containing a comprehensive report of the work done and the experiments performed as part of this project, as well as the results and analysis, can be found in the ```final_report.pdf``` document   
