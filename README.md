@@ -19,9 +19,8 @@ This repository contains the code used for the experiments ran as part of GSoC 2
 |  ├── nabu
 |  ├── translate_test
 ├── data 
-|  ├── processed
 |  ├── synthetic
-|  ├── outputs
+├── outputs
 └── training_plm
 ```
 
